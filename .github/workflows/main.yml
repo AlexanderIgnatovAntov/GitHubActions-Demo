@@ -1,7 +1,11 @@
-name: Manual workflow tester
+name: Workflow tester
 
 on:
   workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 jobs:
   demo-greet:
     runs-on: ubuntu-latest
